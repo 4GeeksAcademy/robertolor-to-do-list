@@ -13,6 +13,8 @@ const Container = () => {
         }
     };
 
+    
+
     const addListItem = () => {
         if (description.length > 0) {
             setListItems([...listItems, description]);
@@ -45,16 +47,18 @@ const Container = () => {
                         key={index}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
-                        className="card d-flex align-items-center justify-content-between mb-1 card-style"
+                        className="card d-flex flex-column align-items-center justify-content-around mb-1 card-style"
                     >
-                            <p className="text">{item}</p>
+                           <div className="row d-flex align-items-left flex-wrap justify-content-between"> 
+                            <p className="text d-inline-flex">{item}</p>
                             {hoveredIndex === index && (
-                                <span className="show" onClick={() => eraseItem(index)}>
-                                    <button className="clear-button">
+                               
+                                    <button className="clear-button" onClick={() => eraseItem(index)} >
                                         X
                                     </button>
-                                </span>
+                                
                             )}
+                            </div>
                     </div>
                 ))}
             </div>

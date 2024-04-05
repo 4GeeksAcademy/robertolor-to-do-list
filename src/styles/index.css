@@ -13,17 +13,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
+    /* COLORS */
+
+    --pedro: black;
     --GREEN-BTN: #16C0A5;
     --CARD-BG: #24443d;
     --FONT-CLR: #E9E9E9;
     --FS: "Roboto", sans-serif;
     
-
-
 }
 
 body {
-    background-color: black
+    background-color: black;
 }
 
 .container {
@@ -78,6 +79,11 @@ body {
     background: var(--CARD-BG);
     color: var(--FONT-CLR)
 }
+.card:hover {
+    background: white;
+    color: black;
+}
+
 
 .text {
     max-width: 90%;
@@ -87,7 +93,7 @@ body {
 
 .clear-button {
     border:none;
-    background-color: none;
+    background: none;
 }
 
 .show {
